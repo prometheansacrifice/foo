@@ -1,0 +1,13 @@
+{
+  "name": "ocaml",
+  "version": "0.0.0",
+  "esy": {
+    "install": [
+      "cp -r bin #{self.install}",
+      "cp -r lib #{self.install}",
+      "cp -r doc #{self.install}",
+      "cp -r man #{self.install}",
+      "cp -r share #{self.install}"
+    ]
+  }
+}
