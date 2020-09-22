@@ -3,10 +3,8 @@
 steps:
   - script: "yarn global add esy"
     displayName: "Install esy (via yarn)"
-
   - bash: |
     YARN_BIN_DIR=$(yarn global bin)
     echo "##vso[task.setvariable variable=YARN_BIN_DIR]$YARN_BIN_DIR"
-
   - powershell: Write-Host "##vso[task.setvariable variable=PATH;]${env:YARN_BIN_DIR};${env:PATH}"
     displayName: "Ensure yarn install global tools are available on $PATH"
