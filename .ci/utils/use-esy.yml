@@ -11,5 +11,5 @@ steps:
 - powershell: Write-Host "##vso[task.setvariable variable=PATH;]${env:YARN_BIN_DIR};${env:PATH}"
   displayName: "Ensure yarn install global tools are available on $PATH"
 
-- bash: "echo $PATH"
-  displayName: "Display $PATH"
+- bash: "env"
+  displayName: "Display env"
