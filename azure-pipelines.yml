@@ -59,8 +59,8 @@ jobs:
       - task: PublishBuildArtifacts@1
         displayName: "Publish Docker built artifact"
         inputs:
-          PathtoPublish: "_container_release/*.tgz"
-          ArtifactName: DockerBuiltNPM.tgz
+          PathtoPublish: "_container_release/"
+          ArtifactName: DockerBuiltNPM
       - script: docker build . -f docker/ProdImage.Dockerfile --network=host -t $(esy__project_name)
         displayName: "Build production Docker image"
       - script: docker save $(esy__project_name) | gzip > $(esy__project_name)-docker-image.tar.gz
