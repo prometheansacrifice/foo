@@ -42,7 +42,7 @@ jobs:
     steps:
       - checkout: self
         submodules: true
-      - script: apt install jq gzip
+      - script: sudo apt install jq gzip
         displayName: Install deps
       - script: docker build . -f docker/DevImage.Dockerfile --network=host -t $(jq .name package.json)-dev
         displayName: "Build Docker (dev) image"
