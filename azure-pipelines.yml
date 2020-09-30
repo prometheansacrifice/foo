@@ -53,7 +53,7 @@ jobs:
         displayName: "Run Docker container"
       - script:  docker cp $(esy__project_name)-container:/app/_release $PWD/_container_release
         displayName: "Copy _release from container"
-      - script: npm release
+      - script: npm pack
         workingDirectory: _container_release
         displayName: "Npm pack'ing"
       - task: PublishBuildArtifacts@1
