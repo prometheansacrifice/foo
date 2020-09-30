@@ -1,4 +1,4 @@
-FROM esy:nightly-alpine-latest
+FROM esydev/esy:nightly-alpine-latest
 
 RUN apk add nodejs npm linux-headers emacs
 COPY . /app
