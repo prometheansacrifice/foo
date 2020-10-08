@@ -3,7 +3,7 @@
 steps:
 - script: "yarn global add esy"
   displayName: "Install esy (via yarn)"
-    
+
 - bash: |
     YARN_BIN_DIR=$(yarn global bin)
     echo $YARN_BIN_DIR
